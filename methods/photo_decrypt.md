@@ -19,4 +19,21 @@
 - 解密
   1. Jphide
     *Jphide是基于最低有效位LSB的JPEG格式图像隐写算法*
-    用jphs工具解密：打开jphswin.exe -> open jpeg 打开图片 -> seek -> 输入密码，确认密码 -> 保存
+    - 用jphs工具解密: 打开jphswin.exe -> open jpeg 打开图片 -> seek -> 输入密码，确认密码 -> 保存
+  2. Outguess
+    *一般用于解密文件信息*
+    - 应用场景: Outguess加密的图片
+    - 该工具使用前需要先编译 `./configure && make && make install`
+    - 格式
+      ```cmd
+      outguess -r decode_file outputfile
+      ```
+  3. F5
+    *解密文件信息*
+    - 使用场景: F5加密的图片
+    - 将解密图片与工具放到统一目录下，cmd进入该目录
+    - 格式
+      ```cmd
+      Java Extract decode_file -p password 
+      ```
+    - 结果存储在output.txt中
